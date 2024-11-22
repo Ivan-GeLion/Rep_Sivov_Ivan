@@ -6,4 +6,5 @@ sum_numbers = sum(skip_none)
 count_numbers = len(numbers)
 average = sum_numbers / count_numbers
 numbers[none_type_in_numbers] = average
+
 print("Измененный список:", numbers)
