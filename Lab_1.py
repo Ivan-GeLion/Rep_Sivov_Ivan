@@ -1,7 +1,11 @@
 # TODO Написать 3 класса с документацией и аннотацией типов
 class friend:
     def __init__(self, name: str, age: int, gender: str):
-        """Создание класса друг и работа с ним
+        """Создание класса "друг" и работа с ним
+
+        :param name: Имя
+        :param age: Возраст
+        :param gender: Пол
         Пример:
         >>> friend1 = friend("Nick", 25, "man")
         """
@@ -24,7 +28,11 @@ class friend:
 
 class car:
     def __init__(self, engine: str, weight: (int, float), wheel_drive: str):
-        """Создание коласса машина и работа с ее характеристиками/атрибутами
+        """Создание класса "машина" и работа с ее характеристиками/атрибутами
+
+        :param engine: Тип двигателя авто
+        :param weight: Снаряженная масса авто
+        :param wheel_drive: Привод авто
         Пример:
         >>> car1 = car("electric", 2.5, "AWD")
         """
@@ -67,13 +75,17 @@ class car:
 class timetable:
     def __init__(self, lesson_on_counting: int, number_classroom: int, teacher_name: str):
         """Создание и работа с учебным расписанием.
+
+        :param lesson_on_counting: Академическая пара по счету
+        :param number_classroom: Номер аудитории
+        :param teacher_name: Фамилия преподавателя
         Пример:
         >>> time1 = timetable(2, 201, 'Ivanov')
         """
         if not isinstance(lesson_on_counting, int):
-            raise TypeError('Номер курса должен быть целым числом')
+            raise TypeError('Номер пары должен быть целым числом')
         if not isinstance(number_classroom, int):
-            raise TypeError('Номер курса должен быть целым числом')
+            raise TypeError('Номер аудитории должен быть целым числом')
         if not isinstance(teacher_name, str):
             raise TypeError('Имя преподавателя должно быть str')
         self.lesson_on_counting = lesson_on_counting
